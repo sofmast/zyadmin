@@ -1,0 +1,166 @@
+/*====================================
+  BARCODE STUDIO PRO
+  RESPONSIVE DESIGN
+=====================================*/
+
+
+/*====================================
+ TABLETS
+=====================================*/
+
+@media(max-width:1000px){
+
+
+.sidebar{
+
+    transform:translateX(-100%);
+
+}
+
+
+
+.sidebar.show{
+
+    transform:translateX(0);
+
+}
+
+
+
+.main{
+
+    margin-left:0;
+
+}
+
+
+
+#menuBtn{
+
+    display:block;
+
+}
+
+
+
+.content{
+
+    padding:25px;
+
+}
+
+
+
+}
+
+
+
+/*====================================
+ MOBILE DEVICES
+=====================================*/
+
+
+@media(max-width:600px){
+
+
+:root{
+
+    --sidebar-width:240px;
+
+}
+
+
+
+/* HEADER */
+
+.topbar{
+
+    height:70px;
+
+    padding:0 15px;
+
+}
+
+
+
+.topbar h1{
+
+    font-size:18px;
+
+}
+
+
+
+.topbar p{
+
+    display:none;
+
+}
+
+
+
+/* CONTENT */
+
+.content{
+
+    padding:15px;
+
+}
+
+
+
+.welcome{
+
+    padding:25px 20px;
+
+}
+
+
+
+.welcome h2{
+
+    font-size:20px;
+
+}
+
+#brandWrapper #zyaco, #foods{
+font-weight: 700;
+font-size: 14px;
+overflow:hidden;
+}
+
+}
+
+
+
+/*====================================
+ SMALL PHONES
+=====================================*/
+
+
+@media(max-width:400px){
+
+
+.brand h2{
+
+    font-size:19px;
+
+}
+
+
+
+.menu li{
+
+    font-size:13px;
+
+    padding:12px;
+
+}
+#brandWrapper #zyaco, #foods{
+font-weight: 700;
+font-size: 14px;
+overflow:hidden;
+}
+
+
+}

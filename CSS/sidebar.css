@@ -1,0 +1,180 @@
+/*====================================
+   BARCODE STUDIO PRO SIDEBAR
+   Babbage Technologies
+=====================================*/
+
+
+.sidebar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:var(--sidebar-width);
+
+    height:100vh;
+
+    background:#ffffff;
+
+    border-right:1px solid var(--border);
+
+    box-shadow:4px 0 25px rgba(0,0,0,.05);
+
+    display:flex;
+
+    flex-direction:column;
+
+    z-index:1000;
+
+    transition:.35s ease;
+
+}
+
+
+
+/*====================================
+ BRAND
+=====================================*/
+
+
+.brand{
+
+    padding:25px 20px;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+
+
+.brand h2{
+
+    color:var(--primary);
+
+    font-size:22px;
+
+    line-height:1.3;
+
+    font-weight:700;
+
+}
+
+
+
+.brand span{
+
+    display:block;
+
+    margin-top:5px;
+
+    font-size:11px;
+
+    letter-spacing:1px;
+
+    color:var(--muted);
+
+    font-weight:400;
+
+}
+
+
+
+/*====================================
+ MENU
+=====================================*/
+
+
+.menu{
+
+    list-style:none;
+
+    padding:20px 12px;
+
+    flex:1;
+
+}
+
+
+
+.menu li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:14px 16px;
+
+    margin-bottom:8px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    color:#555;
+
+    font-size:14px;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+
+
+.menu li:hover{
+
+    background:#fff3e3;
+
+    color:var(--primary);
+
+    transform:translateX(5px);
+
+}
+
+
+
+
+/*====================================
+ ACTIVE MENU
+=====================================*/
+
+
+.menu li.active{
+
+    background:var(--primary);
+
+    color:white;
+
+    box-shadow:
+
+    0 8px 20px rgba(233,141,22,.3);
+
+}
+
+
+
+/*====================================
+ FOOTER
+=====================================*/
+
+
+.sidebar-footer{
+
+    padding:20px;
+
+    border-top:1px solid var(--border);
+
+    text-align:center;
+
+    color:var(--muted);
+
+    font-size:12px;
+
+    line-height:1.6;
+
+}
