@@ -113,6 +113,45 @@ const DEFAULT_PRODUCTS = [
         status: "active",
         createdAt: "2026-09-16T00:00:00.000Z",
         updatedAt: "2026-09-16T00:00:00.000Z"
+    },
+        {
+        id: "ZY-1007",
+        name: "Zyaco Bread 500g",
+        sku: "ZY-BRE-1007",
+        barcode: 6500361034538,
+        category: "Bakery",
+        price:0.00,
+        stock: 200,
+        lowStock: 25,
+        status: "active",
+        createdAt: "2026-09-16T00:00:00.000Z",
+        updatedAt: "2026-09-16T00:00:00.000Z"
+    },
+        {
+        id: "ZY-1008",
+        name: "Zyaco Bread 750g",
+        sku: "ZY-BRE-1008",
+        barcode: 6500361038772,
+        category: "Bakery",
+        price:0.00,
+        stock: 200,
+        lowStock: 25,
+        status: "active",
+        createdAt: "2026-09-16T00:00:00.000Z",
+        updatedAt: "2026-09-16T00:00:00.000Z"
+    },
+        {
+        id: "ZY-1009",
+        name: "Zyaco Bread 1000g",
+        sku: "ZY-BRE-1009",
+        barcode: 6500361031599,
+        category: "Bakery",
+        price:0.00,
+        stock: 200,
+        lowStock: 25,
+        status: "active",
+        createdAt: "2026-09-16T00:00:00.000Z",
+        updatedAt: "2026-09-16T00:00:00.000Z"
     }
 
 ];
