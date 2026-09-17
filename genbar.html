@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Barcode Studio Pro | Babbage Technologies
+</title>
+
+<link rel="stylesheet" href="CSS/dashboard.css">
+<!--link rel="stylesheet" href="CSS/sidebar.css">
+<link rel="stylesheet" href="CSS/responsive.css"-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.6/dist/JsBarcode.all.min.js"></script>
+</head>
+
+<body>
+
+
+<!-- =========================
+SIDEBAR
+========================= -->
+
+<aside class="sidebar">
+
+<div class="brand">
+
+<div id="brandWrapper">
+
+<div class="logo-container">
+
+<img
+src="images/zylogo.jpeg"
+alt="ZYACO Logo"
+width="55">
+
+</div>
+
+<div>
+
+<span id="zyaco">
+ZYACO
+</span>
+
+<span id="foods">
+FOODS
+</span>
+
+<small>
+Manufacturing Suite
+</small>
+
+</div>
+
+</div>
+
+<span>
+Admin User Interface
+</span>
+
+</div>
+
+
+
+<ul class="menu">
+
+<li class="active" id="home">
+<span>🏠</span>
+Dashboard
+</li>
+
+<li id="prods">
+<span>📦</span>
+Products
+</li>
+
+<li id="barcodegen">
+<span>▣</span>
+Barcode Generator
+</li>
+
+<li id="QRcode">
+<span>▢</span>
+QR Studio
+</li>
+
+<li id="label">
+<span>🖨</span>
+Label Designer
+</li>
+
+<li id="printManager">
+<span>📋</span>
+Print Manager
+</li>
+
+<li id="settings">
+<span>⚙</span>
+Settings
+</li>
+
+<li id="resetKey" style="color:#CC5858; text-align: center; padding-left: 40px;">
+Reset App
+</li>
+
+</ul>
+
+
+
+<div class="sidebar-footer">
+
+<strong>Babbage Technologies</strong>
+
+<br>
+
+Version 1.0.0
+
+</div>
+
+</aside>
+
+
+
+<!-- =========================
+MAIN
+========================= -->
+
+<div class="main">
+
+
+<header class="topbar">
+
+<div class="topbar-left">
+
+<button id="menuBtn">
+
+☰
+
+</button>
+
+<div>
+
+<h1>
+
+Barcode Studio Pro
+
+</h1>
+
+<p>
+
+Professional Barcode & Label Management
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="topbar-right">
+
+<div class="user-card">
+
+<div class="avatar">
+
+A
+
+</div>
+
+<div>
+
+<strong>
+
+Administrator
+
+</strong>
+
+<small>
+
+Online
+
+</small>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+
+
+
+<main class="content">
+
+
+
+<section class="welcome">
+
+
+<div id="companyName">
+
+ITpro Zambia
+
+</div>
+
+
+<h2 id="heding">
+
+Barcode Studio
+
+</h2>
+
+
+<p>
+
+Create GS1-compatible barcodes, internal product codes,
+QR codes and professional printable labels from one
+centralized workspace.
+
+</p>
+
+
+
+<div class="welcome-actions">
+
+<button>
+
+➕ New Product
+
+</button>
+
+<button>
+
+🖨 Print Labels
+
+</button>
+
+<button>
+
+📊 Reports
+
+</button>
+
+</div>
+
+
+</section>
+
+
+
+
+<section class="dashboard-grid">
+
+
+<div class="card">
+
+<h3>
+
+Products
+
+</h3>
+
+<h2>
+
+0
+
+</h2>
+
+<p>
+
+Registered Products
+
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+
+Barcodes
+
+</h3>
+
+<h2>
+
+0
+
+</h2>
+
+<p>
+
+Generated
+
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+
+Print Jobs
+
+</h3>
+
+<h2>
+
+0
+
+</h2>
+
+<p>
+
+Completed
+
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+
+QR Codes
+
+</h3>
+
+<h2>
+
+0
+
+</h2>
+
+<p>
+
+Created
+
+</p>
+
+</div>
+
+
+</section>
+
+
+
+<section class="workspace" id="workspace">
+
+    <div class="workspace-header">
+
+        <div>
+            <span class="section-eyebrow">
+                PRODUCT MANAGEMENT
+            </span>
+
+            <h3>
+                Product Catalogue
+            </h3>
+
+            <p>
+                Manage products, SKUs, barcodes and inventory information.
+            </p>
+        </div>
+
+        <button
+            class="primary-btn"
+            id="addProductBtn"
+            type="button">
+
+            <span>＋</span>
+            Add Product
+
+        </button>
+
+    </div>
+
+    <div class="product-stats">
+
+        <div class="product-stat">
+            <span>Total Products</span>
+            <strong id="totalProducts">0</strong>
+        </div>
+
+        <div class="product-stat">
+            <span>Active Products</span>
+            <strong id="activeProducts">0</strong>
+        </div>
+
+        <div class="product-stat">
+            <span>Low Stock</span>
+            <strong id="lowStockProducts">0</strong>
+        </div>
+
+        <div class="product-stat">
+            <span>With Barcode</span>
+            <strong id="barcodedProducts">0</strong>
+        </div>
+
+    </div>
+
+    <div class="product-toolbar">
+
+        <div class="product-search">
+
+            <span>⌕</span>
+
+            <input
+                type="search"
+                id="productSearch"
+                placeholder="Search products, SKU or barcode..."
+                autocomplete="off">
+
+        </div>
+
+        <select id="categoryFilter">
+
+            <option value="all">
+                All Categories
+            </option>
+
+        </select>
+
+        <select id="statusFilter">
+
+            <option value="all">
+                All Status
+            </option>
+
+            <option value="active">
+                Active
+            </option>
+
+            <option value="inactive">
+                Inactive
+            </option>
+
+        </select>
+
+    </div>
+
+    <div class="products-table-wrapper">
+
+        <table class="products-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Product</th>
+
+                    <th>SKU</th>
+
+                    <th>Barcode</th>
+
+                    <th>Category</th>
+
+                    <th>Price</th>
+
+                    <th>Stock</th>
+
+                    <th>Status</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="productsTableBody"></tbody>
+
+        </table>
+
+    </div>
+
+    <div
+        class="products-empty"
+        id="productsEmpty">
+
+        <div class="empty-icon">
+            📦
+        </div>
+
+        <h4>
+            No products found
+        </h4>
+
+        <p>
+            Add your first product to begin building your catalogue.
+        </p>
+
+        <button
+            class="primary-btn"
+            id="emptyAddProductBtn"
+            type="button">
+
+            ＋ Add First Product
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+</main>
+
+</div>
+
+
+<script src="JS/dashboard.js"></script>
+
+</body>
+
+</html>
