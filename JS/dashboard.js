@@ -28,6 +28,10 @@ let products = [];
    DEFAULT PRODUCTS
    BARCODE STUDIO PRO
 ========================================================= */
+function daclear() {
+    alert('Data Reloaded');
+    localStorage.clear();
+}
 
 const DEFAULT_PRODUCTS = [
 
@@ -103,7 +107,7 @@ const DEFAULT_PRODUCTS = [
 
     {
         id: "ZY-1006",
-        name: "Zyaco popcorn 1kg",
+        name: "Zyaco raw popcorn 1kg",
         sku: "ZY-POP-1006",
         barcode: 6500361032732,
         category: "grains",
@@ -116,7 +120,7 @@ const DEFAULT_PRODUCTS = [
     },
         {
         id: "ZY-1007",
-        name: "Zyaco Bread 500g",
+        name: "Zyaco Fresh Bread 500g",
         sku: "ZY-BRE-1007",
         barcode: 6500361034538,
         category: "Bakery",
@@ -129,7 +133,7 @@ const DEFAULT_PRODUCTS = [
     },
         {
         id: "ZY-1008",
-        name: "Zyaco Bread 750g",
+        name: "Zyaco Fresh Bread 150g",
         sku: "ZY-BRE-1008",
         barcode: 6500361038772,
         category: "Bakery",
@@ -142,7 +146,7 @@ const DEFAULT_PRODUCTS = [
     },
         {
         id: "ZY-1009",
-        name: "Zyaco Bread 1000g",
+        name: "Zyaco Fresh Bread 100g",
         sku: "ZY-BRE-1009",
         barcode: 6500361031599,
         category: "Bakery",
@@ -152,8 +156,47 @@ const DEFAULT_PRODUCTS = [
         status: "active",
         createdAt: "2026-09-16T00:00:00.000Z",
         updatedAt: "2026-09-16T00:00:00.000Z"
+    },
+          {
+        id: "ZY-1010",
+        name: "Zyaco peanut Butter 500g",
+        sku: "ZY-BRE-1010",
+        barcode:6500361592137,
+        category: "Bakery",
+        price:0.00,
+        stock: 200,
+        lowStock: 25,
+        status: "active",
+        createdAt: "2026-09-16T00:00:00.000Z",
+        updatedAt: "2026-09-16T00:00:00.000Z"
+    },
+              {
+        id: "ZY-1011",
+        name: "Zyaco peanut Butter 1kg",
+        sku: "ZY-BRE-1011",
+        barcode:6500361709030,
+        category: "Bakery",
+        price:0.00,
+        stock: 200,
+        lowStock: 25,
+        status: "active",
+        createdAt: "2026-09-16T00:00:00.000Z",
+        updatedAt: "2026-09-16T00:00:00.000Z"
+    },
+                  {
+        id: "ZY-1012",
+        name: "Marrian Kitchen Crackers",
+        sku: "MK-CRA-1012",
+        barcode:6500361709566,
+        category: "Bakery",
+        price:0.00,
+        stock: 200,
+        lowStock:20,
+        status: "active",
+        createdAt: "2026-09-16T00:00:00.000Z",
+        updatedAt: "2026-09-16T00:00:00.000Z"
     }
-
+    
 ];
 
 let editingProductId = null;
@@ -376,7 +419,7 @@ menuItems.forEach(item => {
     );
 
 });
-
+resetKey.addEventListener('click',daclear);
 
 /* =========================================================
    NAVIGATION ROUTER
