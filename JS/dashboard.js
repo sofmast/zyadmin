@@ -144,6 +144,19 @@ const DEFAULT_PRODUCTS = [
         createdAt: "2026-09-16T00:00:00.000Z",
         updatedAt: "2026-09-16T00:00:00.000Z"
     },
+           {
+        id: "ZY-1013",
+        name: "Zyaco Fresh Bread 20g",
+        sku: "ZY-BRE-1013",
+        barcode: 6500361007792,
+        category: "Bakery",
+        price:0.00,
+        stock: 200,
+        lowStock: 25,
+        status: "active",
+        createdAt: "2026-09-16T00:00:00.000Z",
+        updatedAt: "2026-09-16T00:00:00.000Z"
+    },
         {
         id: "ZY-1009",
         name: "Zyaco Fresh Bread 100g",
